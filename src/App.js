@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Menu from './components/Menu';
 import Order from './components/Order';
 import Contact from './components/Contact';
+import Login from './components/Login';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -12,8 +14,10 @@ function App() {
       <Router>
         <Switch>
           <Route path="/order" component={Order}/>
+          <Route path="/checkout" component={Checkout}/>
           <Route path="/menu" component={Menu}/>
           <Route path="/contact" component={Contact}/>
+          <Route path="/login" component={Login}/>
           <Route path="/" component={Home}/>
         </Switch>
       </Router>

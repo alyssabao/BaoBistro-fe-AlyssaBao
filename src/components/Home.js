@@ -51,9 +51,7 @@ export default function Home() {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="about.html">
-                    About
-                  </a>
+                  <Link to={`/order`} className="nav-link">Order</Link>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="news.html">
@@ -71,30 +69,16 @@ export default function Home() {
       <div className="slider-wrap">
         <div
           className="slider-item"
-          style={{ backgroundImage: 'url("img/hero_1.jpg")' }}
-        ></div>
-        {/* <section className="home-slider owl-carousel">
-        <div className="slider-item" style={{backgroundImage: 'url("img/hero_1.jpg")'}}>
+          style={{ backgroundImage: 'url("img/bistro-store.jpg")' }}
+        >
           <div className="container">
             <div className="row slider-text align-items-center justify-content-center">
               <div className="col-md-8 text-center col-sm-12 ">
-                <h1 data-aos="fade-up mb-5">Eat, Drinks at Gourmet</h1>
-                <p data-aos="fade-up" data-aos-delay={200}><a href="#" className="btn btn-white btn-outline-white">Get Started</a></p>
+                <h1 data-aos="fade-up">Eat, Drink, and Enjoy</h1>
               </div>
             </div>
           </div>
         </div>
-        <div className="slider-item" style={{backgroundImage: 'url("img/hero_2.jpg")'}}>
-          <div className="container">
-            <div className="row slider-text align-items-center justify-content-center">
-              <div className="col-md-8 text-center col-sm-12 ">
-                <h1 data-aos="fade-up mb-5">Enjoy delicious food at Gourmet</h1>
-                <p data-aos="fade-up" data-aos-delay={200}><a href="#" className="btn btn-white btn-outline-white">Get Started</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       </div>
       <section className="section bg-light py-5  bottom-slant-gray">
         <div className="container">
@@ -130,19 +114,16 @@ export default function Home() {
         <div className="container">
           <div className="row mb-5 justify-content-center" data-aos="fade">
             <div className="col-md-7 text-center heading-wrap">
-              <h2 data-aos="fade-up">Best &amp; Good</h2>
+              <h2 data-aos="fade-up">Bún Chả Hà Nội</h2>
               <p data-aos="fade-up" data-aos-delay={100}>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
+                With fresh rice vermicelli, succulent grilled pork, vegetables, and fish sauce, it's easy to see why this popular dish from Ha Noi is former US President Obama's favorite Vietnamese food.
               </p>
             </div>
           </div>
           <div className="row align-items-center">
             <div className="col-lg-4">
               <img
-                src="img/dishes_1.jpg"
+                src="img/buncha-1.jpg"
                 alt="Image"
                 className="img-fluid about_img_1"
                 data-aos="fade"
@@ -151,7 +132,7 @@ export default function Home() {
             </div>
             <div className="col-lg-4">
               <img
-                src="img/about_1.jpg"
+                src="img/buncha-2.jpg"
                 alt="Image"
                 className="img-fluid about_img_1"
                 data-aos="fade"
@@ -160,7 +141,7 @@ export default function Home() {
             </div>
             <div className="col-lg-4">
               <img
-                src="img/dishes_3.jpg"
+                src="img/buncha-3.jpg"
                 alt="Image"
                 className="img-fluid about_img_1"
                 data-aos="fade"
@@ -169,69 +150,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="section">
-        <div className="clearfix mb-5 pb-5">
-          <div className="container-fluid mb-5">
-            <div className="row" data-aos="fade">
-              <div className="col-md-12 text-center heading-wrap">
-                <h2>Special Menu</h2>
-              </div>
-            </div>
-          </div>
-          <div className="owl-carousel centernonloop">
-            <a
-              href="#"
-              className="item-dishes"
-              data-aos="fade-right"
-              data-aos-delay={100}
-            >
-              <div className="text">
-                <p className="dishes-price">$11.50</p>
-                <h2 className="dishes-heading">
-                  Organic tomato salad, gorgonzola cheese, capers
-                </h2>
-              </div>
-              <img src="img/dishes_1.jpg" alt="" className="img-fluid" />
-            </a>
-            <a
-              href="#"
-              className="item-dishes"
-              data-aos="fade-right"
-              data-aos-delay={200}
-            >
-              <div className="text">
-                <p className="dishes-price">$12.00</p>
-                <h2 className="dishes-heading">Baked broccoli</h2>
-              </div>
-              <img src="img/dishes_2.jpg" alt="" className="img-fluid" />
-            </a>
-            <a
-              href="#"
-              className="item-dishes"
-              data-aos="fade-right"
-              data-aos-delay={300}
-            >
-              <div className="text">
-                <p className="dishes-price">$11.00</p>
-                <h2 className="dishes-heading">Spicy meatballs</h2>
-              </div>
-              <img src="img/dishes_3.jpg" alt="" className="img-fluid" />
-            </a>
-            <a
-              href="#"
-              className="item-dishes"
-              data-aos="fade-right"
-              data-aos-delay={400}
-            >
-              <div className="text">
-                <p className="dishes-price">$12.00</p>
-                <h2 className="dishes-heading">Eggplant parmigiana</h2>
-              </div>
-              <img src="img/dishes_4.jpg" alt="" className="img-fluid" />
-            </a>
-          </div>
-        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </section>
       <section className="section bg-light  top-slant-white bottom-slant-gray">
         <div className="clearfix mb-5 pb-5">
