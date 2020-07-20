@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 export default function Contact() {
   return (
@@ -6,7 +7,7 @@ export default function Contact() {
       <header role="banner">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div className="container">
-          <img src="img/bao-bistro-white.png" width="200px"/>
+            <img src="img/bao-bistro-white.png" width="200px"/>
             <button
               className="navbar-toggler"
               type="button"
@@ -21,52 +22,16 @@ export default function Contact() {
             <div className="collapse navbar-collapse" id="navbarsExample05">
               <ul className="navbar-nav ml-auto pl-lg-5 pl-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="index.html">
-                    Home
-                  </a>
+                    <Link to={`/`} className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link " href="recipes.html">
-                    Recipes
-                  </a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="services.html"
-                    id="dropdown04"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Services
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdown04">
-                    <a className="dropdown-item" href="services.html">
-                      Delicious Food
-                    </a>
-                    <a className="dropdown-item" href="services.html">
-                      Enjoy Drinks
-                    </a>
-                    <a className="dropdown-item" href="services.html">
-                      Eat All You Can
-                    </a>
-                  </div>
+                  <Link to={`/order`} className="nav-link">Order</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link " href="about.html">
-                    About
-                  </a>
+                  <Link to={`/contact`} className="nav-link active">Contact</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link " href="news.html">
-                    News
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="contact.html">
-                    Contact
-                  </a>
+                  <Link to={`/cart`} className="nav-link">Cart</Link>
                 </li>
               </ul>
             </div>

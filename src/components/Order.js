@@ -7,7 +7,7 @@ export default function Order() {
   let [keyword, setKeyword] = useState(null);
   let [checkedStates, setCheckedStates] = useState(Array(10).fill(false));
   let [checkedCategoryList, setCheckedCategoryList] = useState([]);
-  
+
   let arr = [
     "Coffee",
     "Smoothies",
@@ -32,7 +32,7 @@ export default function Order() {
     "juices",
     "alcohol",
   ];
-let [showList, setShowList] = useState(arrLowercase);
+  let [showList, setShowList] = useState(arrLowercase);
   //   const categoryToggle = (cat) => {
   //     if (checkedCategoryList.length === 0) {
   //       setCheckedCategoryList([cat]);
@@ -62,6 +62,11 @@ let [showList, setShowList] = useState(arrLowercase);
     setOriginalList(result);
     setFoodItem(result);
   };
+  const foo = [
+    { id: 1, price: 200, type: "coffee" },
+    { id: 2, price: 200, type: "food" },
+  ];
+
   const stringArray = () => {
     let temp;
     for (let i = 0; i < arr.length; i++) {
@@ -99,7 +104,12 @@ let [showList, setShowList] = useState(arrLowercase);
   const renderFood = (arr) => {
     return arr.map((e) => {
       if (showList.includes(e.category)) {
-        return <li>{e.name}</li>;
+        return (
+          <div className="menuItem">
+            <img src={e.image} className="pixFormat" />
+            <h6>{e.name}</h6>
+          </div>
+        );
       }
     });
   };
@@ -147,46 +157,18 @@ let [showList, setShowList] = useState(arrLowercase);
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={`/menu`} className="nav-link">
-                    Menu
-                  </Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="services.html"
-                    id="dropdown04"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Services
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdown04">
-                    <a className="dropdown-item" href="services.html">
-                      Delicious Food
-                    </a>
-                    <a className="dropdown-item" href="services.html">
-                      Enjoy Drinks
-                    </a>
-                    <a className="dropdown-item" href="services.html">
-                      Eat All You Can
-                    </a>
-                  </div>
-                </li>
-                <li className="nav-item">
                   <Link to={`/order`} className="nav-link active">
                     Order
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="news.html">
-                    News
-                  </a>
-                </li>
-                <li className="nav-item">
                   <Link to={`/contact`} className="nav-link">
                     Contact
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={`/cart`} className="nav-link">
+                    Cart
                   </Link>
                 </li>
               </ul>
@@ -208,29 +190,43 @@ let [showList, setShowList] = useState(arrLowercase);
           </div>
         </div>
       </div>
-      <form
-        class="form-inline my-2 my-lg-0 searchBar"
-        onSubmit={(e) => searchByKeyword(e)}
-      >
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          onChange={(e) => setKeyword(e.target.value)}
-        ></input>
-        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
-          Search
-        </button>
-      </form>
       <div className="orderPage">
-        <span className="cateFormat">
-          <h3>Filter by Category</h3>
-          <span className="orderFormat">{renderCategories(foodItem)}</span>
+        <span className="leftSide">
+          <form
+            className="form-inline my-2 my-lg-0 searchBar"
+            onSubmit={(e) => searchByKeyword(e)}
+          >
+            <input
+              className="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              onChange={(e) => setKeyword(e.target.value)}
+            ></input>
+            <button
+              className="btn btn-outline-warning my-2 my-sm-0"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+          <span className="cateFormat">
+            <h3>Filter by Category</h3>
+            <span className="orderFormat">{renderCategories(foodItem)}</span>
+          </span>
         </span>
         <span className="orderFormat">{renderFood(foodItem)}</span>
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
       {checkedCategoryList}
+
       <footer className="site-footer lighterBg" role="contentinfo">
         <div className="container">
           <div className="row mb-5">

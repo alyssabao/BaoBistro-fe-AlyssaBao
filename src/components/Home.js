@@ -25,41 +25,13 @@ export default function Home() {
                     <Link to={`/`} className="nav-link active">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to={`/menu`} className="nav-link">Menu</Link>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="services.html"
-                    id="dropdown04"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Services
-                  </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdown04">
-                    <a className="dropdown-item" href="services.html">
-                      Delicious Food
-                    </a>
-                    <a className="dropdown-item" href="services.html">
-                      Enjoy Drinks
-                    </a>
-                    <a className="dropdown-item" href="services.html">
-                      Eat All You Can
-                    </a>
-                  </div>
-                </li>
-                <li className="nav-item">
                   <Link to={`/order`} className="nav-link">Order</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="news.html">
-                    News
-                  </a>
+                  <Link to={`/contact`} className="nav-link">Contact</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={`/contact`} className="nav-link">Contact</Link>
+                  <Link to={`/cart`} className="nav-link">Cart</Link>
                 </li>
               </ul>
             </div>
@@ -84,7 +56,7 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src="img/hero_1.jpg" alt="Image" className="img-fluid" />
+              <img src="img/bao-bistro-store.jpg" alt="Image" className="img-fluid" />
             </div>
             <div className="col-lg-5 ml-auto">
               <div className="text-left heading-wrap">
@@ -92,19 +64,12 @@ export default function Home() {
               </div>
               <h3 className="mb-4">Welcome To Our Restaurant</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-                ut enim quam laboriosam illum amet.
+                Bao Bistro is a restaurant based in Da Nang, Vietnam.
               </p>
               <p>
-                Obcaecati nisi ipsum possimus necessitatibus tempore, illo id
-                facere magni quisquam quam quaerat accusamus dolores?
+                We ensure high-quality food with no MSG, syrups, or preservatives. We hope you'll leave with happy stomachs!
               </p>
               <p>
-                <img
-                  src="img/signature.png"
-                  alt="Image"
-                  className="img-fluid w-25"
-                />
               </p>
             </div>
           </div>
@@ -160,7 +125,7 @@ export default function Home() {
           <div className="container-fluid">
             <div className="row" data-aos="fade">
               <div className="col-md-12 text-center heading-wrap">
-                <h2>Our Menu</h2>
+                <h2>Menu Highlights</h2>
               </div>
             </div>
           </div>
@@ -171,31 +136,31 @@ export default function Home() {
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image order-2"
-                  style={{ backgroundImage: 'url("img/dishes_4.jpg")' }}
+                  style={{ backgroundImage: 'url("img/pho-mai-que.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text order-1">
-                  <h3>Baked new Zealand mussels </h3>
+                  <h3>Cheese Sticks</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Phô Mai Que)
                   </p>
-                  <p className="text-primary h3">$12.00</p>
+                  <p>Breaded mozzarella sticks, served with hot sauce.</p>
+                  <p className="text-primary h3">45.000 VND</p>
                 </div>
               </div>
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image"
-                  style={{ backgroundImage: 'url("img/dishes_1.jpg")' }}
+                  style={{ backgroundImage: 'url("img/french-fries.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text">
-                  <h3>Spicy Calamari and beans</h3>
+                  <h3>French Fries</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Khoai Tây Chiên)
                   </p>
-                  <p className="text-primary h3">$12.00</p>
+                  <p>Classic French fries, perfect for snacking. Served with ketchup.</p>
+                  <p className="text-primary h3">35.000 VND</p>
                 </div>
               </div>
             </div>
@@ -203,31 +168,31 @@ export default function Home() {
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image order-2"
-                  style={{ backgroundImage: 'url("img/dishes_2.jpg")' }}
+                  style={{ backgroundImage: 'url("img/sausage.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text order-1">
-                  <h3>Bacon wrapped wild gulf prawns</h3>
+                  <h3>Sausage</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Xúc Xích)
                   </p>
-                  <p className="text-primary h3">$18.00</p>
+                  <p>Sliced German sausage, served with hot sauce.</p>
+                  <p className="text-primary h3">40.000 VND</p>
                 </div>
               </div>
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image"
-                  style={{ backgroundImage: 'url("img/dishes_3.jpg")' }}
+                  style={{ backgroundImage: 'url("img/fish-balls.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text">
-                  <h3>Seared ahi tuna fillet*, honey-ginger sauce</h3>
+                  <h3>Fish Balls</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Chả Cá Viên Chiên)
                   </p>
-                  <p className="text-primary h3">$16.00</p>
+                  <p>Fried ground fish meat. Served with hot sauce.</p>
+                  <p className="text-primary h3">40.000 VND</p>
                 </div>
               </div>
             </div>
@@ -237,31 +202,31 @@ export default function Home() {
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image order-2"
-                  style={{ backgroundImage: 'url("img/dishes_4.jpg")' }}
+                  style={{ backgroundImage: 'url("img/mojito.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text order-1">
-                  <h3>Baked new Zealand mussels </h3>
+                  <h3>Mojito</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Mojito)
                   </p>
-                  <p className="text-primary h3">$12.00</p>
+                  <p>Made with white rum, sugar, lime juice, soda water, and mint.</p>
+                  <p className="text-primary h3">60.000 VND</p>
                 </div>
               </div>
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image"
-                  style={{ backgroundImage: 'url("img/dishes_1.jpg")' }}
+                  style={{ backgroundImage: 'url("img/tra-dao.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text">
-                  <h3>Spicy Calamari and beans</h3>
+                  <h3>Peach Tea</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Trà Đào)
                   </p>
-                  <p className="text-primary h3">$12.00</p>
+                  <p>Black tea with peach syrup and peach slices.</p>
+                  <p className="text-primary h3">45.000 VND</p>
                 </div>
               </div>
             </div>
@@ -269,30 +234,30 @@ export default function Home() {
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image order-2"
-                  style={{ backgroundImage: 'url("img/dishes_2.jpg")' }}
+                  style={{ backgroundImage: 'url("img/coconut-coffee.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text order-1">
-                  <h3>Bacon wrapped wild gulf prawns</h3>
+                  <h3>Coconut Coffee</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Cà Phê Dừa)
                   </p>
-                  <p className="text-primary h3">$18.00</p>
+                  <p>Coffee mixed with condensed milk and coconut milk.</p>
+                  <p className="text-primary h3">35.000 VND</p>
                 </div>
               </div>
               <div className="sched d-block d-lg-flex">
                 <div
                   className="bg-image"
-                  style={{ backgroundImage: 'url("img/dishes_3.jpg")' }}
+                  style={{ backgroundImage: 'url("img/mango-smoothie.jpg")' }}
                   data-aos="fade"
                 />
                 <div className="text">
-                  <h3>Seared ahi tuna fillet*, honey-ginger sauce</h3>
+                  <h3>Passion Mango Smoothie</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Architecto illo delectus...
+                    (Sinh Tố Chanh Dây Xoài)
                   </p>
+                  <p>Fresh mango and passionfruit blended into a smoothie.</p>
                   <p className="text-primary h3">$16.00</p>
                 </div>
               </div>
