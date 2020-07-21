@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NumberFormat from "react-number-format";
 import productActions from "../store/actions/productActions";
+import cartActions from "../store/actions/cartActions";
 import { connect, useDispatch } from "react-redux";
+import Modal from 'react-bootstrap/Modal';
 
 const Order = ({ originalList, loading }) => {
   let [foodItem, setFoodItem] = useState(originalList);
@@ -10,6 +12,10 @@ const Order = ({ originalList, loading }) => {
   let [keyword, setKeyword] = useState(null);
   let [checkedStates, setCheckedStates] = useState(Array(10).fill(false));
   let [checkedCategoryList, setCheckedCategoryList] = useState([]);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const dispatch = useDispatch();
 
   let arr = [
@@ -77,20 +83,22 @@ const Order = ({ originalList, loading }) => {
 
     tempArray[index] = !tempArray[index];
     setCheckedStates([...tempArray]);
-    
-    let categories = []
+
+    let categories = [];
     for (let j = 0; j < tempArray.length; j++) {
       if (tempArray[j]) {
-        categories.push(arrLowercase[j])
+        categories.push(arrLowercase[j]);
       }
     }
     if (categories.length === 0 || categories.length === tempArray.length) {
-      setFoodItem(originalList)
+      setFoodItem(originalList);
     } else {
-      let filteredList = originalList.filter( item => categories.includes(item.category))
-      setFoodItem(filteredList)
+      let filteredList = originalList.filter((item) =>
+        categories.includes(item.category)
+      );
+      setFoodItem(filteredList);
     }
-    
+
     console.log("SDSD", checkedStates);
   };
   const searchByKeyword = (e) => {
@@ -127,7 +135,10 @@ const Order = ({ originalList, loading }) => {
                 <p>{e.name_vn}</p>
               </span>
             </div>
-            <button className="btn btn-warning my-2 my-sm-0" type="submit">
+            <button
+              className="btn btn-warning my-2 my-sm-0"
+              onClick={() => addToCart(e)}
+            >
               <NumberFormat
                 value={e.price}
                 thousandSeparator={true}
@@ -157,12 +168,24 @@ const Order = ({ originalList, loading }) => {
     ));
   };
 
+  const addToCart = (product) => {
+    dispatch(cartActions.addToCart(product));
+    setShow(true)
+  };
+
   if (loading) {
     return <div>Loading</div>;
   }
 
   return (
     <div className="darkBg">
+      <Modal show={show} onHide={handleClose} animation={false}>
+        <span className="modalCenter">
+          <p className="textBlack">Item successfully added to cart!</p>
+          <img src="https://i.ibb.co/X4bNFP6/checkmark.gif" width="300px"/>
+        </span>
+        
+      </Modal>
       <header role="banner">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div className="container">
