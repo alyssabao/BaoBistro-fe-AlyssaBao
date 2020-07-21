@@ -42,11 +42,11 @@ export default function Contact() {
       <div className="slider-wrap">
         <div
           className="slider-item"
-          style={{ backgroundImage: 'url("img/hero_1.jpg")' }}
+          style={{ backgroundImage: 'url("img/bistro-store.jpg")' }}
         >
           <div className="container">
             <div className="row slider-text align-items-center justify-content-center">
-              <div className="col-md-8 text-center col-sm-12 ">
+              <div className="col-md-8 text-center col-sm-12">
                 <h1 data-aos="fade-up">Contact Us</h1>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function Contact() {
         </div>
         {/* END slider */}
       </div>
-      <section className="section  pt-5 top-slant-white2 relative-higher bottom-slant-gray">
+      <section className="section pt-5 top-slant-gray2 relative-higher bottom-slant-gray contactBg">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -122,89 +122,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <section className="section bg-light pt-0 relative-higher">
-        <div className="clearfix mb-5 pb-5 ">
-          <div className="container-fluid">
-            <div className="row" data-aos="fade">
-              <div className="col-md-12 text-center heading-wrap">
-                <h2>Testimonial</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-7">
-              <div className="owl-carousel centernonloop2">
-                <div
-                  className="slide"
-                  data-aos="fade-left"
-                  data-aos-delay={100}
-                >
-                  <blockquote className="testimonial">
-                    <p>
-                      “ Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts. Separated they live in Bookmarksgrove right at the
-                      coast of the Semantics, a large language ocean. ”
-                    </p>
-                    <div className="d-flex author">
-                      <img src="img/person_1.jpg" alt="" className="mr-4" />
-                      <div className="author-info">
-                        <h4>Mellisa Howard</h4>
-                        <p>CEO, XYZ Company</p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </div>
-                <div
-                  className="slide"
-                  data-aos="fade-left"
-                  data-aos-delay={200}
-                >
-                  <blockquote className="testimonial">
-                    <p>
-                      “ Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts. Separated they live in Bookmarksgrove right at the
-                      coast of the Semantics, a large language ocean. ”
-                    </p>
-                    <div className="d-flex author">
-                      <img src="img/person_2.jpg" alt="" className="mr-4" />
-                      <div className="author-info">
-                        <h4>Mike Richardson</h4>
-                        <p>CEO, XYZ Company</p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </div>
-                <div
-                  className="slide"
-                  data-aos="fade-left"
-                  data-aos-delay={300}
-                >
-                  <blockquote className="testimonial">
-                    <p>
-                      “ Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts. Separated they live in Bookmarksgrove right at the
-                      coast of the Semantics, a large language ocean. ”
-                    </p>
-                    <div className="d-flex author">
-                      <img src="img/person_3.jpg" alt="" className="mr-4" />
-                      <div className="author-info">
-                        <h4>Charles White</h4>
-                        <p>CEO, XYZ Company</p>
-                      </div>
-                    </div>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>{" "}
-      {/* .section */}
       <footer className="site-footer" role="contentinfo">
         <div className="container">
           <div className="row mb-5">

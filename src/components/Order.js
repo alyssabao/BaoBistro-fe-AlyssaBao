@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import NumberFormat from "react-number-format";
+import productActions from "../store/actions/productActions";
+import { connect, useDispatch } from "react-redux";
 
-export default function Order() {
-  let [foodItem, setFoodItem] = useState(null);
-  let [originalList, setOriginalList] = useState(null);
+const Order = ({ originalList, loading }) => {
+  let [foodItem, setFoodItem] = useState(originalList);
+  // let [originalList, setOriginalList] = useState([]);
   let [keyword, setKeyword] = useState(null);
   let [checkedStates, setCheckedStates] = useState(Array(10).fill(false));
   let [checkedCategoryList, setCheckedCategoryList] = useState([]);
+  const dispatch = useDispatch();
 
   let arr = [
     "Coffee",
@@ -55,18 +59,6 @@ export default function Order() {
   //     console.log(checkedCategoryList);
   //   };
 
-  const getData = async () => {
-    let url = `http://localhost:5000/food`;
-    let data = await fetch(url);
-    let result = await data.json();
-    setOriginalList(result);
-    setFoodItem(result);
-  };
-  const foo = [
-    { id: 1, price: 200, type: "coffee" },
-    { id: 2, price: 200, type: "food" },
-  ];
-
   const stringArray = () => {
     let temp;
     for (let i = 0; i < arr.length; i++) {
@@ -85,6 +77,20 @@ export default function Order() {
 
     tempArray[index] = !tempArray[index];
     setCheckedStates([...tempArray]);
+    
+    let categories = []
+    for (let j = 0; j < tempArray.length; j++) {
+      if (tempArray[j]) {
+        categories.push(arrLowercase[j])
+      }
+    }
+    if (categories.length === 0 || categories.length === tempArray.length) {
+      setFoodItem(originalList)
+    } else {
+      let filteredList = originalList.filter( item => categories.includes(item.category))
+      setFoodItem(filteredList)
+    }
+    
     console.log("SDSD", checkedStates);
   };
   const searchByKeyword = (e) => {
@@ -97,17 +103,39 @@ export default function Order() {
     }
     setFoodItem(filteredList);
   };
+  const resetFilter = () => {
+    setFoodItem(originalList);
+  };
+
   useEffect(() => {
-    getData();
-  }, []);
+    if (originalList.length === 0) {
+      dispatch(productActions.getProducts());
+    } else {
+      setFoodItem(originalList);
+    }
+  }, [originalList]);
 
   const renderFood = (arr) => {
     return arr.map((e) => {
       if (showList.includes(e.category)) {
         return (
-          <div className="menuItem">
-            <img src={e.image} className="pixFormat" />
-            <h6>{e.name}</h6>
+          <div className="menuItemFormat">
+            <div className="menuItem">
+              <img src={e.image} className="pixFormat" />
+              <span className="leftSide">
+                <h6>{e.name}</h6>
+                <p>{e.name_vn}</p>
+              </span>
+            </div>
+            <button className="btn btn-warning my-2 my-sm-0" type="submit">
+              <NumberFormat
+                value={e.price}
+                thousandSeparator={true}
+                suffix="VND"
+                displayType="text"
+              />
+              <img src="img/add-to-cart.png" width="30px" />
+            </button>
           </div>
         );
       }
@@ -129,9 +157,10 @@ export default function Order() {
     ));
   };
 
-  if (foodItem === null) {
+  if (loading) {
     return <div>Loading</div>;
   }
+
   return (
     <div className="darkBg">
       <header role="banner">
@@ -192,6 +221,13 @@ export default function Order() {
       </div>
       <div className="orderPage">
         <span className="leftSide">
+          <span
+            className="labelFormat resetFormat"
+            onClick={(e) => resetFilter(e)}
+          >
+            <i className="fas fa-times-circle orderFormat circle"></i>
+            <p className="orderFormat">Reset filters</p>
+          </span>
           <form
             className="form-inline my-2 my-lg-0 searchBar"
             onSubmit={(e) => searchByKeyword(e)}
@@ -314,4 +350,11 @@ export default function Order() {
       </footer>
     </div>
   );
-}
+};
+
+const mapStateToProps = (state) => ({
+  originalList: state.product.products,
+  loading: state.product.loading,
+});
+
+export default connect(mapStateToProps)(Order);
