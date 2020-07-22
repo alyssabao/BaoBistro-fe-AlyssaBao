@@ -4,7 +4,8 @@ import NumberFormat from "react-number-format";
 import productActions from "../store/actions/productActions";
 import cartActions from "../store/actions/cartActions";
 import { connect, useDispatch } from "react-redux";
-import Modal from 'react-bootstrap/Modal';
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const Order = ({ originalList, loading }) => {
   let [foodItem, setFoodItem] = useState(originalList);
@@ -170,7 +171,7 @@ const Order = ({ originalList, loading }) => {
 
   const addToCart = (product) => {
     dispatch(cartActions.addToCart(product));
-    setShow(true)
+    setShow(true);
   };
 
   if (loading) {
@@ -182,9 +183,13 @@ const Order = ({ originalList, loading }) => {
       <Modal show={show} onHide={handleClose} animation={false}>
         <span className="modalCenter">
           <p className="textBlack">Item successfully added to cart!</p>
-          <img src="https://i.ibb.co/X4bNFP6/checkmark.gif" width="300px"/>
+          <img src="https://i.ibb.co/X4bNFP6/checkmark.gif" width="300px" />
+          <Button variant="success textWhite">
+            <Link to={`/cart`} className="nav-link textWhite">
+              View Cart
+            </Link>
+          </Button>
         </span>
-        
       </Modal>
       <header role="banner">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">

@@ -259,8 +259,14 @@ h6 {
 
 .modalCenter {
   padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.checkoutFormat {
+  margin-top: 150px;
+  margin-bottom: 50px;
 }

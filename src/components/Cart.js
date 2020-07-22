@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 import NumberFormat from "react-number-format";
 
 const Cart = ({ cartList, quantities }) => {
+  let [countItem, setCountItem] = useState([1]);
   return (
     <div>
       <header role="banner">
@@ -92,6 +93,7 @@ const Cart = ({ cartList, quantities }) => {
                       type="number"
                       className="form-control text-center"
                       defaultValue={quantities[index]}
+                      onChange={(e) => setCountItem(e.target.value)}
                     />
                   </td>
                   <td data-th="Subtotal" className="text-center">
@@ -114,9 +116,11 @@ const Cart = ({ cartList, quantities }) => {
           <tfoot>
             <tr>
               <td>
-                <a href="#" className="btn btn-warning textWhite">
-                  <i className="fa fa-angle-left" /> Continue Shopping
-                </a>
+                <Link to={`/order`} className="nav-link">
+                  <button className="btn btn-warning textWhite">
+                    <i className="fa fa-angle-left" /> Continue Shopping
+                  </button>
+                </Link>
               </td>
               <td colSpan={2} className="hidden-xs" />
               <td className="hidden-xs text-center">
@@ -133,12 +137,11 @@ const Cart = ({ cartList, quantities }) => {
                 </strong>
               </td>
               <td>
-                <a
-                  href="https://www.paypal.com/webapps/hermes?token=5EY097812P7754247&useraction=commit&mfid=1546377013907_cf1dec6830d7"
-                  className="btn btn-success btn-block"
-                >
-                  Checkout <i className="fa fa-angle-right" />
-                </a>
+                <Link to={`/checkout`} className="nav-link">
+                  <button className="btn btn-success btn-block">
+                    Checkout <i className="fa fa-angle-right" />
+                  </button>
+                </Link>
               </td>
             </tr>
           </tfoot>

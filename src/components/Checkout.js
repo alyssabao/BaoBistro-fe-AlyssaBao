@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Checkout() {
   return (
@@ -46,176 +46,189 @@ export default function Checkout() {
           </div>
         </nav>
       </header>
-          <div className="checkout__form">
-            <h4>Billing Details</h4>
-            <form action="#">
-              <div className="row">
-                <div className="col-lg-8 col-md-6">
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="checkout__input">
-                        <p>
-                          First Name<span>*</span>
-                        </p>
-                        <input type="text" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="checkout__input">
-                        <p>
-                          Last Name<span>*</span>
-                        </p>
-                        <input type="text" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="checkout__input">
-                    <p>
-                      Country<span>*</span>
-                    </p>
-                    <input type="text" />
-                  </div>
-                  <div className="checkout__input">
-                    <p>
-                      Address<span>*</span>
-                    </p>
-                    <input
-                      type="text"
-                      placeholder="Street Address"
-                      className="checkout__input__add"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Apartment, suite, unite ect (optinal)"
-                    />
-                  </div>
-                  <div className="checkout__input">
-                    <p>
-                      Town/City<span>*</span>
-                    </p>
-                    <input type="text" />
-                  </div>
-                  <div className="checkout__input">
-                    <p>
-                      Country/State<span>*</span>
-                    </p>
-                    <input type="text" />
-                  </div>
-                  <div className="checkout__input">
-                    <p>
-                      Postcode / ZIP<span>*</span>
-                    </p>
-                    <input type="text" />
-                  </div>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="checkout__input">
-                        <p>
-                          Phone<span>*</span>
-                        </p>
-                        <input type="text" />
-                      </div>
-                    </div>
-                    <div className="col-lg-6">
-                      <div className="checkout__input">
-                        <p>
-                          Email<span>*</span>
-                        </p>
-                        <input type="text" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="checkout__input__checkbox">
-                    <label htmlFor="acc">
-                      Create an account?
-                      <input type="checkbox" id="acc" />
-                      <span className="checkmark" />
-                    </label>
-                  </div>
-                  <p>
-                    Create an account by entering the information below. If you
-                    are a returning customer please login at the top of the page
-                  </p>
-                  <div className="checkout__input">
-                    <p>
-                      Account Password<span>*</span>
-                    </p>
-                    <input type="text" />
-                  </div>
-                  <div className="checkout__input__checkbox">
-                    <label htmlFor="diff-acc">
-                      Ship to a different address?
-                      <input type="checkbox" id="diff-acc" />
-                      <span className="checkmark" />
-                    </label>
-                  </div>
-                  <div className="checkout__input">
-                    <p>
-                      Order notes<span>*</span>
-                    </p>
-                    <input
-                      type="text"
-                      placeholder="Notes about your order, e.g. special notes for delivery."
-                    />
-                  </div>
+      <div className="container checkoutFormat">
+        <div className="row">
+          <div className="col-md-4 order-md-2 mb-4">
+            <h4 className="d-flex justify-content-between align-items-center mb-3">
+              <span className="text-muted">Your cart</span>
+              <span className="badge badge-secondary badge-pill">3</span>
+            </h4>
+            <ul className="list-group mb-3">
+              <li className="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 className="my-0 textBlack">Product name</h6>
+                  <small className="text-muted">Brief description</small>
                 </div>
-                <div className="col-lg-4 col-md-6">
-                  <div className="checkout__order">
-                    <h4>Your Order</h4>
-                    <div className="checkout__order__products">
-                      Products <span>Total</span>
-                    </div>
-                    <ul>
-                      <li>
-                        Vegetable’s Package <span>$75.99</span>
-                      </li>
-                      <li>
-                        Fresh Vegetable <span>$151.99</span>
-                      </li>
-                      <li>
-                        Organic Bananas <span>$53.99</span>
-                      </li>
-                    </ul>
-                    <div className="checkout__order__subtotal">
-                      Subtotal <span>$750.99</span>
-                    </div>
-                    <div className="checkout__order__total">
-                      Total <span>$750.99</span>
-                    </div>
-                    <div className="checkout__input__checkbox">
-                      <label htmlFor="acc-or">
-                        Create an account?
-                        <input type="checkbox" id="acc-or" />
-                        <span className="checkmark" />
-                      </label>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adip elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                    <div className="checkout__input__checkbox">
-                      <label htmlFor="payment">
-                        Check Payment
-                        <input type="checkbox" id="payment" />
-                        <span className="checkmark" />
-                      </label>
-                    </div>
-                    <div className="checkout__input__checkbox">
-                      <label htmlFor="paypal">
-                        Paypal
-                        <input type="checkbox" id="paypal" />
-                        <span className="checkmark" />
-                      </label>
-                    </div>
-                    <button type="submit" className="site-btn">
-                      PLACE ORDER
-                    </button>
-                  </div>
+                <span className="text-muted">$12</span>
+              </li>
+              <li className="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 className="my-0 textBlack">Second product</h6>
+                  <small className="text-muted">Brief description</small>
+                </div>
+                <span className="text-muted">$8</span>
+              </li>
+              <li className="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 className="my-0 textBlack">Third item</h6>
+                  <small className="text-muted">Brief description</small>
+                </div>
+                <span className="text-muted">$5</span>
+              </li>
+              <li className="list-group-item d-flex justify-content-between bg-light">
+                <div className="text-success">
+                  <h6 className="my-0">Promo code</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span className="text-success">-$5</span>
+              </li>
+              <li className="list-group-item d-flex justify-content-between">
+                <span className="textBlack">Total (USD)</span>
+                <strong className="textBlack">$20</strong>
+              </li>
+            </ul>
+            <form className="card p-2">
+              <div className="input-group">
+                <input type="text" className="form-control" placeholder="Promo code" />
+                <div className="input-group-append">
+                  <button type="submit" className="btn btn-secondary">Redeem</button>
                 </div>
               </div>
             </form>
           </div>
+          <div className="col-md-8 order-md-1">
+            <h4 className="mb-3">Billing address</h4>
+            <form className="needs-validation" noValidate>
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="firstName">First name</label>
+                  <input type="text" className="form-control" id="firstName" placeholder="First name" />
+                  <div className="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="lastName">Last name</label>
+                  <input type="text" className="form-control" id="lastName" placeholder="Last name" />
+                  <div className="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="phone">Phone number</label>
+                <input type="text" className="form-control" id="phone" placeholder="+84 123 456 789" />
+                <div className="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email">Email <span className="text-muted">(Optional)</span></label>
+                <input type="email" className="form-control" id="email" placeholder="you@example.com" />
+                <div className="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="address">Address</label>
+                <input type="text" className="form-control" id="address" placeholder="1234 Main St" required />
+                <div className="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-4 mb-3">
+                  <label htmlFor="district">District</label>
+                  <input type="text" className="form-control" id="district" placeholder="District" />
+                  <div className="invalid-feedback">
+                    Valid district is required.
+                  </div>
+                </div>
+                <div className="col-md-4 mb-3">
+                  <label htmlFor="ward">Ward</label>
+                  <input type="text" className="form-control" id="ward" placeholder="Ward" />
+                  <div className="invalid-feedback">
+                    Valid ward is required.
+                  </div>
+                </div>
+                <div className="col-md-4 mb-3">
+                  <label htmlFor="residence">Type of residence</label>
+                  <select className="custom-select d-block w-100" id="residence" required>
+                    <option value>Choose...</option>
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Hotel</option>
+                    <option>Office</option>
+                    <option>Compound</option>
+                  </select>
+                  <div className="invalid-feedback">
+                    Please select a valid type of residence.
+                  </div>
+                </div>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="notes">Delivery notes <span className="text-muted">(Optional)</span></label>
+                <input type="text" className="form-control" id="notes" placeholder="Notes" />
+              </div>
+              <hr className="mb-4" />
+              <h4 className="mb-3">Payment</h4>
+              <div className="d-block my-3">
+                <div className="custom-control custom-radio">
+                  <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" defaultChecked required />
+                  <label className="custom-control-label" htmlFor="credit">Credit card</label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required />
+                  <label className="custom-control-label" htmlFor="debit">Debit card</label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required />
+                  <label className="custom-control-label" htmlFor="paypal">PayPal</label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="cash" name="paymentMethod" type="radio" className="custom-control-input" required />
+                  <label className="custom-control-label" htmlFor="cash">Cash on delivery</label>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="cc-name">Name on card</label>
+                  <input type="text" className="form-control" id="cc-name" placeholder required />
+                  <small className="text-muted">Full name as displayed on card</small>
+                  <div className="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="cc-number">Credit card number</label>
+                  <input type="text" className="form-control" id="cc-number" placeholder required />
+                  <div className="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-3 mb-3">
+                  <label htmlFor="cc-expiration">Expiration</label>
+                  <input type="text" className="form-control" id="cc-expiration" placeholder required />
+                  <div className="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+                <div className="col-md-3 mb-3">
+                  <label htmlFor="cc-cvv">CVV</label>
+                  <input type="text" className="form-control" id="cc-cvv" placeholder required />
+                  <div className="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+              <hr className="mb-4" />
+              <button className="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
