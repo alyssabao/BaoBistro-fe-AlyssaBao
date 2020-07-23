@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   return (
@@ -7,7 +7,7 @@ export default function Contact() {
       <header role="banner">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div className="container">
-            <img src="img/bao-bistro-white.png" width="200px"/>
+            <img src="img/bao-bistro-white.png" width="200px" />
             <button
               className="navbar-toggler"
               type="button"
@@ -22,16 +22,24 @@ export default function Contact() {
             <div className="collapse navbar-collapse" id="navbarsExample05">
               <ul className="navbar-nav ml-auto pl-lg-5 pl-0">
                 <li className="nav-item">
-                    <Link to={`/`} className="nav-link">Home</Link>
+                  <Link to={`/`} className="nav-link">
+                    Home
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={`/order`} className="nav-link">Order</Link>
+                  <Link to={`/order`} className="nav-link">
+                    Order
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={`/contact`} className="nav-link active">Contact</Link>
+                  <Link to={`/contact`} className="nav-link active">
+                    Contact
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={`/cart`} className="nav-link">Cart</Link>
+                  <Link to={`/cart`} className="nav-link">
+                    Cart
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -61,11 +69,15 @@ export default function Contact() {
               <form action="#" method="post">
                 <div className="row">
                   <div className="col-md-6 form-group">
-                    <label htmlFor="name" className="text-orange">Name</label>
+                    <label htmlFor="name" className="text-orange">
+                      Name
+                    </label>
                     <input type="text" id="name" className="form-control " />
                   </div>
                   <div className="col-md-6 form-group">
-                    <label htmlFor="phone" className="text-orange">Phone</label>
+                    <label htmlFor="phone" className="text-orange">
+                      Phone
+                    </label>
                     <input type="text" id="phone" className="form-control " />
                   </div>
                 </div>
@@ -74,13 +86,17 @@ export default function Contact() {
                 </div>
                 <div className="row">
                   <div className="col-md-12 form-group">
-                    <label htmlFor="email" className="text-orange">Email</label>
+                    <label htmlFor="email" className="text-orange">
+                      Email
+                    </label>
                     <input type="email" id="email" className="form-control " />
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-12 form-group">
-                    <label htmlFor="message" className="text-orange">Write Message</label>
+                    <label htmlFor="message" className="text-orange">
+                      Write Message
+                    </label>
                     <textarea
                       name="message"
                       id="message"
@@ -107,7 +123,9 @@ export default function Contact() {
                 <h4 className="mb-5">Contact Details</h4>
                 <p className="d-flex">
                   <span className="ion-ios-location icon mr-5" />
-                  <span className="text-white">Số 2 Đường 3 Tháng 2, Quận Hải Châu, TP Đà Nẵng, Việt Nam</span>
+                  <span className="text-white">
+                    Số 2 Đường 3 Tháng 2, Quận Hải Châu, TP Đà Nẵng, Việt Nam
+                  </span>
                 </p>
                 <p className="d-flex">
                   <span className="ion-ios-telephone icon mr-5" />
@@ -128,9 +146,9 @@ export default function Contact() {
             <div className="col-md-4 mb-5">
               <h3>About Us</h3>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus et dolor blanditiis consequuntur ex voluptates
-                perspiciatis omnis unde minima expedita.
+                Bao Bistro is a passion project by a couple of
+                Vietnamese-Americans. We hope you'll love our food and drinks as
+                much as we do!
               </p>
               <ul className="list-unstyled footer-link d-flex footer-social">
                 <li>
@@ -171,7 +189,9 @@ export default function Contact() {
                 <ul className="list-unstyled footer-link">
                   <li className="d-block">
                     <span className="d-block text-orange">Address:</span>
-                    <span>Số 2 Đường 3 Tháng 2, Quận Hải Châu, TP Đà Nẵng, Việt Nam</span>
+                    <span>
+                      Số 2 Đường 3 Tháng 2, Quận Hải Châu, TP Đà Nẵng, Việt Nam
+                    </span>
                   </li>
                   <li className="d-block">
                     <span className="d-block text-orange">Phone:</span>
@@ -185,7 +205,16 @@ export default function Contact() {
               </div>
             </div>
             <div className="col-md-3 mb-5">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1916.8291281300517!2d108.22129705606231!3d16.083214188872333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142183c50e271e9%3A0x12ecde32a0b3abb8!2zMiDEkMaw4budbmcgMyBUaMOhbmcgMiwgVGh14bqtbiBQaMaw4bubYywgSOG6o2kgQ2jDonUsIMSQw6AgTuG6tW5nIDU1MDAwMCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1594630217004!5m2!1sen!2s" style={{border: 0}} allowFullScreen aria-hidden="false" tabIndex={0} width={400} height={300} frameBorder={0} />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1916.8291281300517!2d108.22129705606231!3d16.083214188872333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142183c50e271e9%3A0x12ecde32a0b3abb8!2zMiDEkMaw4budbmcgMyBUaMOhbmcgMiwgVGh14bqtbiBQaMaw4bubYywgSOG6o2kgQ2jDonUsIMSQw6AgTuG6tW5nIDU1MDAwMCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1594630217004!5m2!1sen!2s"
+                style={{ border: 0 }}
+                allowFullScreen
+                aria-hidden="false"
+                tabIndex={0}
+                width={400}
+                height={300}
+                frameBorder={0}
+              />
             </div>
             <div className="col-md-3"></div>
           </div>

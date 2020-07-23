@@ -5,6 +5,21 @@ import NumberFormat from "react-number-format";
 
 const Cart = ({ cartList, quantities }) => {
   let [countItem, setCountItem] = useState([1]);
+  const dispatch = useDispatch();
+
+  const handleDeleteProduct = (id) => {
+    dispatch({
+      type: "DELETE_PRODUCT_FROM_CART",
+      payload: id,
+    });
+  };
+
+  const handleQuantityChange = (value, index) => {
+    dispatch({
+        type: "UPDATE_QUANTITIES",
+        payload: {value: value, index:index},
+      });
+  }
   return (
     <div>
       <header role="banner">
@@ -92,8 +107,8 @@ const Cart = ({ cartList, quantities }) => {
                     <input
                       type="number"
                       className="form-control text-center"
-                      defaultValue={quantities[index]}
-                      onChange={(e) => setCountItem(e.target.value)}
+                      value={quantities[index]}
+                      onChange={(e) => handleQuantityChange(e.target.value, index)}
                     />
                   </td>
                   <td data-th="Subtotal" className="text-center">
@@ -105,7 +120,10 @@ const Cart = ({ cartList, quantities }) => {
                     />
                   </td>
                   <td className="actions" data-th>
-                    <button className="btn btn-danger btn-sm">
+                    <button
+                      className="btn btn-danger btn-sm"
+                      onClick={() => handleDeleteProduct(product._id)}
+                    >
                       <i className="fa fa-trash-o" />
                     </button>
                   </td>

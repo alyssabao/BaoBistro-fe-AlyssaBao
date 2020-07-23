@@ -9,7 +9,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Order from "./components/Order";
 import Contact from "./components/Contact";
-import Login from "./components/Login";
+import Confirmation from "./components/Confirmation";
 import Checkout from "./components/Checkout";
 import Cart from "./components/Cart";
 import { useDispatch } from "react-redux";
@@ -32,7 +32,7 @@ function App() {
           <Route path="/checkout" component={Checkout} />
           <Route path="/cart" component={Cart} />
           <Route path="/contact" component={Contact} />
-          <Route path="/login" component={Login} />
+          <Route path="/confirmation" component={Confirmation} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>

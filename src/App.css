@@ -270,3 +270,44 @@ h6 {
   margin-top: 150px;
   margin-bottom: 50px;
 }
+
+.checkoutFont {
+  font-size: 14pt !important;
+}
+
+.textYellow {
+  color:#E1B332;
+}
+
+.btnHome {
+  text-decoration: none !important;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.paginationFormat {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  margin: 10px;
+  background-color: #292A2F !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationFormat:hover {
+  background-color: #33343a;
+}
+
+.activePage {
+  background-color: #FF7404 !important;
+}

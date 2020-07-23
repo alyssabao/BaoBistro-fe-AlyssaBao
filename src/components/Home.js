@@ -271,9 +271,7 @@ export default function Home() {
             <div className="col-md-4 mb-5">
               <h3>About Us</h3>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus et dolor blanditiis consequuntur ex voluptates
-                perspiciatis omnis unde minima expedita.
+                Bao Bistro is a passion project by a couple of Vietnamese-Americans. We hope you'll love our food and drinks as much as we do!
               </p>
               <ul className="list-unstyled footer-link d-flex footer-social">
                 <li>

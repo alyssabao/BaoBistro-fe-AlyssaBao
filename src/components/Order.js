@@ -6,6 +6,7 @@ import cartActions from "../store/actions/cartActions";
 import { connect, useDispatch } from "react-redux";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Pagination from "react-js-pagination";
 
 const Order = ({ originalList, loading }) => {
   let [foodItem, setFoodItem] = useState(originalList);
@@ -14,7 +15,7 @@ const Order = ({ originalList, loading }) => {
   let [checkedStates, setCheckedStates] = useState(Array(10).fill(false));
   let [checkedCategoryList, setCheckedCategoryList] = useState([]);
   const [show, setShow] = useState(false);
-
+  var elmnt = document.getElementById("hahaha");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ const Order = ({ originalList, loading }) => {
     "alcohol",
   ];
   let [showList, setShowList] = useState(arrLowercase);
+  const [currentPage, setCurrentPage] = useState(1);
   //   const categoryToggle = (cat) => {
   //     if (checkedCategoryList.length === 0) {
   //       setCheckedCategoryList([cat]);
@@ -279,7 +281,25 @@ const Order = ({ originalList, loading }) => {
             <span className="orderFormat">{renderCategories(foodItem)}</span>
           </span>
         </span>
-        <span className="orderFormat">{renderFood(foodItem)}</span>
+        <span className="orderFormat" id="hahaha">
+          {renderFood(foodItem.slice((currentPage - 1) * 10, currentPage * 10))}
+          <div className="paginationCenter">
+            <Pagination
+            activePage={currentPage}
+            itemsCountPerPage={10}
+            totalItemsCount={foodItem.length}
+            pageRangeDisplayed={3}
+            onChange={(e) => {
+              elmnt.scrollIntoView();
+              setCurrentPage(e);
+            }}
+            itemClass="page-item"
+            linkClass="page-link paginationFormat"
+            activeLinkClass="activePage"
+          />
+          </div>
+          
+        </span>
       </div>
       <br></br>
       <br></br>
@@ -297,9 +317,7 @@ const Order = ({ originalList, loading }) => {
             <div className="col-md-4 mb-5">
               <h3>About Us</h3>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus et dolor blanditiis consequuntur ex voluptates
-                perspiciatis omnis unde minima expedita.
+              Bao Bistro is a passion project by a couple of Vietnamese-Americans. We hope you'll love our food and drinks as much as we do!
               </p>
               <ul className="list-unstyled footer-link d-flex footer-social">
                 <li>
