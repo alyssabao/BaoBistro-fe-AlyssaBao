@@ -104,6 +104,7 @@ const Order = ({ originalList, loading }) => {
 
     console.log("SDSD", checkedStates);
   };
+  
   const searchByKeyword = (e) => {
     e.preventDefault();
     let filteredList = originalList;

@@ -1,7 +1,7 @@
 const initialState = {
   products: [],
   error: "",
-  loading: false,
+  loading: true,
 };
 const productReducer = (state = initialState, action) => {
   switch (action.type) {

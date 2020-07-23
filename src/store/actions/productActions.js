@@ -1,8 +1,8 @@
 const getProducts = () => async (dispatch) => {
-  dispatch({
-    type: "GET_PRODUCTS_START",
-    payload: null,
-  });
+  // dispatch({
+  //   type: "GET_PRODUCTS_START",
+  //   payload: null,
+  // });
   try {
     let url = process.env.REACT_APP_SERVER + `/food`;
     let data = await fetch(url);
