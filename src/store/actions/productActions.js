@@ -4,7 +4,7 @@ const getProducts = () => async (dispatch) => {
     payload: null,
   });
   try {
-    let url = `http://localhost:5000/food`;
+    let url = process.env.REACT_APP_SERVER + `/food`;
     let data = await fetch(url);
     let result = await data.json();
 

@@ -59,7 +59,7 @@ const history = useHistory()
       }, 0),
     };
     console.log(orderData)
-    const newOrder = await fetch("http://localhost:5000/order", {
+    const newOrder = await fetch(process.env.REACT_APP_SERVER + "/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
