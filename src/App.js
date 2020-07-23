@@ -17,8 +17,8 @@ import { useDispatch } from "react-redux";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    const cart = JSON.parse(localStorage.getItem("cart"));
-    const quantities = JSON.parse(localStorage.getItem("quantities"));
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const quantities = JSON.parse(localStorage.getItem("quantities")) || [];
     dispatch({
       type: "SET_CART_VALUES",
       payload: { cart: cart, quantities: quantities },
