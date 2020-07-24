@@ -178,7 +178,9 @@ const Order = ({ originalList, loading }) => {
   };
 
   if (loading) {
-    return <div>Loading</div>;
+    return <div className="loadingFormat">
+      <img src="https://www.camppontiac.com/images/loading.gif"/>
+    </div>;
   }
 
   return (
